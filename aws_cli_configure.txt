@@ -1,0 +1,49 @@
+Last login: Thu Apr 17 10:42:20 on ttys000
+vamshisaini@Vamshis-MacBook-Air ~ % aws --version
+aws-cli/2.26.5 Python/3.13.2 Darwin/24.4.0 exe/x86_64
+vamshisaini@Vamshis-MacBook-Air ~ % aws configure
+AWS Access Key ID [****************4P44]: ^C
+vamshisaini@Vamshis-MacBook-Air ~ % aws iam list-users
+{
+    "Users": [
+        {
+            "Path": "/",
+            "UserName": "CLI-User",
+            "UserId": "AIDAYQNJS5QW3DWKEUPGA",
+            "Arn": "arn:aws:iam::585008081965:user/CLI-User",
+            "CreateDate": "2025-04-06T02:41:18+00:00",
+            "PasswordLastUsed": "2025-04-18T18:49:34+00:00"
+        }
+    ]
+}
+vamshisaini@Vamshis-MacBook-Air ~ % aws iam list-users
+{
+    "Users": [
+        {
+            "Path": "/",
+            "UserName": "Admin-1",
+            "UserId": "AIDAYQNJS5QW7QFO7MKXQ",
+            "Arn": "arn:aws:iam::585008081965:user/Admin-1",
+            "CreateDate": "2025-04-19T02:07:02+00:00"
+        },
+        {
+            "Path": "/",
+            "UserName": "CLI-User",
+            "UserId": "AIDAYQNJS5QW3DWKEUPGA",
+            "Arn": "arn:aws:iam::585008081965:user/CLI-User",
+            "CreateDate": "2025-04-06T02:41:18+00:00",
+            "PasswordLastUsed": "2025-04-18T18:49:34+00:00"
+        }
+    ]
+}
+vamshisaini@Vamshis-MacBook-Air ~ % aws sts get-caller-identity
+{
+    "UserId": "AIDAYQNJS5QW3DWKEUPGA",
+    "Account": "585008081965",
+    "Arn": "arn:aws:iam::585008081965:user/CLI-User"
+}
+vamshisaini@Vamshis-MacBook-Air ~ % script -q -t 0 tmp.awscliconfigure.ts
+vamshisaini@Vamshis-MacBook-Air ~ % script -q -t 0 awscliconfigure.ts                                   
+vamshisaini@Vamshis-MacBook-Air ~ % history > session_log.txt
+
+vamshisaini@Vamshis-MacBook-Air ~ % 
