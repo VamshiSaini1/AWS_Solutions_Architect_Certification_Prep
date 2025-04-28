@@ -1,0 +1,13 @@
+#!/bin/bash
+# Update package lists
+yum update -y   # use 'apt-get update -y' if Ubuntu
+
+# Install Apache Web Server
+yum install httpd -y  # use 'apt-get install apache2 -y' if Ubuntu
+
+# Start Apache
+systemctl start httpd  # use 'systemctl start apache2' if Ubuntu
+systemctl enable httpd
+
+# Create a simple test webpage
+echo "<h1>Congratulations! Your EC2 instance is up and running.</h1>" > /var/www/html/index.html
