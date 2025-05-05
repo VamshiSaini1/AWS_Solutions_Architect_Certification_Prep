@@ -1,0 +1,52 @@
+Last login: Mon May  5 09:43:36 on console
+vamshisaini@Vamshis-MacBook-Air ~ % cd /Users/vamshisaini/Developer/AWS        
+vamshisaini@Vamshis-MacBook-Air AWS % ls         
+aws_cli_configure.txt		EC2-demo-userdata.txt
+demo-ec2-instance-key-pair.pem
+vamshisaini@Vamshis-MacBook-Air AWS % chmod 0400 demo-ec2-instance-key-pair.pem
+vamshisaini@Vamshis-MacBook-Air AWS % ssh -i demo-ec2-instance-key-pair.pem ec2-user@18.212.168.112
+The authenticity of host '18.212.168.112 (18.212.168.112)' can't be established.
+ED25519 key fingerprint is SHA256:hbIMxS0GJGNGFtUBpw7pPtxbH0wocSeVggqcP/K370A.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '18.212.168.112' (ED25519) to the list of known hosts.
+
+A newer release of "Amazon Linux" is available.
+  Version 2023.7.20250428:
+Run "/usr/bin/dnf check-release-update" for full release and version update info
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+[ec2-user@ip-172-31-81-219 ~]$ whoami
+ec2-user
+[ec2-user@ip-172-31-81-219 ~]$ ping google.com
+PING google.com (142.250.31.102) 56(84) bytes of data.
+64 bytes from bj-in-f102.1e100.net (142.250.31.102): icmp_seq=1 ttl=102 time=1.86 ms
+64 bytes from bj-in-f102.1e100.net (142.250.31.102): icmp_seq=2 ttl=102 time=1.81 ms
+64 bytes from bj-in-f102.1e100.net (142.250.31.102): icmp_seq=3 ttl=102 time=1.64 ms
+64 bytes from bj-in-f102.1e100.net (142.250.31.102): icmp_seq=4 ttl=102 time=1.52 ms
+64 bytes from bj-in-f102.1e100.net (142.250.31.102): icmp_seq=5 ttl=102 time=1.93 ms
+64 bytes from bj-in-f102.1e100.net (142.250.31.102): icmp_seq=6 ttl=102 time=1.50 ms
+
+64 bytes from bj-in-f102.1e100.net (142.250.31.102): icmp_seq=7 ttl=102 time=1.94 ms
+64 bytes from bj-in-f102.1e100.net (142.250.31.102): icmp_seq=8 ttl=102 time=2.06 ms
+64 bytes from bj-in-f102.1e100.net (142.250.31.102): icmp_seq=9 ttl=102 time=1.49 ms
+64 bytes from bj-in-f102.1e100.net (142.250.31.102): icmp_seq=10 ttl=102 time=1.50 ms
+64 bytes from bj-in-f102.1e100.net (142.250.31.102): icmp_seq=11 ttl=102 time=2.31 ms
+64 bytes from bj-in-f102.1e100.net (142.250.31.102): icmp_seq=12 ttl=102 time=1.98 ms
+64 bytes from bj-in-f102.1e100.net (142.250.31.102): icmp_seq=13 ttl=102 time=1.50 ms
+^C
+--- google.com ping statistics ---
+13 packets transmitted, 13 received, 0% packet loss, time 12020ms
+rtt min/avg/max/mdev = 1.490/1.770/2.306/0.257 ms
+[ec2-user@ip-172-31-81-219 ~]$ exit
+logout
+Connection to 18.212.168.112 closed.
+vamshisaini@Vamshis-MacBook-Air AWS % 
